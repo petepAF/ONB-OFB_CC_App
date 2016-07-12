@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,14 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Info_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Info_GUI.Designer.cs">
+      <DependentUpon>Info_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_GUI.Designer.cs">
+      <DependentUpon>Search_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_GUI.Designer.cs">
+      <DependentUpon>Main_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Info_GUI.resx">
+      <DependentUpon>Info_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_GUI.resx">
+      <DependentUpon>Search_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_GUI.resx">
+      <DependentUpon>Main_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +98,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
